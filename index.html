@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHAZI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-gray-100">G H A Z I</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-100 hover:bg-gray-200">Home</a>
+                    <a href="#" class="text-gray-100 hover:bg-gray-200">About</a>
+                    <a href="#" class="text-gray-100 hover:bg-gray-200">Contact</a>
+                    
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-200 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                
+                <div class="md:w-2/2">
+                    <img src="../image/h1.webp" 
+                         alt="Tech Gadgets" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Main Section with Product Slider -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800">Featured Products</h2>
+            <div class="flex space-x-4">
+                <button id="prevBtn" class="slider-btn bg-gray-200 p-2 rounded-full hover:bg-gray-500 hover:text-white">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn" class="slider-btn bg-gray-500 p-2 rounded-full hover:bg-gray-500 hover:text-white">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="relative overflow-hidden">
+            <div id="productSlider" class="flex transition-transform duration-300 ease-in-out">
+                <!-- Product cards will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 id="modalTitle" class="text-2xl font-bold text-gray-800"></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div class="md:flex gap-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <img id="modalImage" src="" alt="" class="w-full h-auto rounded-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <p id="modalBrand" class="text-gray-600 mb-2"></p>
+                        <div class="flex items-center mb-4">
+                            <div id="modalRating" class="flex">
+                                <!-- Stars will be inserted here -->
+                            </div>
+                            <span id="ratingValue" class="ml-2 text-gray-600">(0)</span>
+                        </div>
+                        <p id="modalDescription" class="text-gray-700 mb-6"></p>
+                        <div class="flex items-center mb-6">
+                            <span id="modalPrice" class="text-2xl font-bold text-black-700  mr-4"></span>
+                            <span id="modalDiscount" class="text-green-600 bg-green-100 px-2 py-1 rounded text-sm"></span>
+                        </div>
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-2"> Type:</h4>
+                            <div id="modalCoupons" class="flex flex-wrap gap-2">
+                               
+                            </div>
+                        </div>
+                        <button class="bg-gray-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-200 w-full">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-500 text-white py-12">
+        
+            <div class="border-t bg-gray-500mt-8 pt-8 text-center text-gray-50">
+                <p>&copy; G H A Z I 2025.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="add.js"></script>
+</body>
+</html>
